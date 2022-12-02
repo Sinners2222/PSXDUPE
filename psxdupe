@@ -1,0 +1,23 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+
+local Window = Library.CreateLib("Script Hub -- By CHHI ", "BloodTheme")
+local Tab = Window:NewTab("Main")
+local Section = Tab:NewSection("misc")
+end)
+
+Section:NewSlider("WalkSpeed", "More Speed", 500, 25, function(s) 
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+Section:NewSlider("JumpPower", "Jump Higher", 500, 50, function(s) 
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+Section:NewKeybind("Activate/Deactivate GUI", "You Can Customize To The Key You Want", Enum.KeyCode.F, function()
+	Library:ToggleUI()
+end)
+
+
+local Tab = Window:NewTab("PSX dupe")
+Section:NewButton("PSX dupe", "ButtonInfo", function()
+loadstring(game:HttpsGet("https://pastebin.com/raw/zWQFYu1q"))()
+end)
